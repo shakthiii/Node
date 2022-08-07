@@ -28,9 +28,6 @@ export function HomeRoute() {
       ) : typeof backendData.data === "undefined" ? (
         <h1 className="text-center">Loading.... </h1>
       ) : (
-        // backendData.data.map((value, i) => {
-        //   <p key={i}>{value}</p>;
-        // })
         <div className="container ">
           <table className="table table-bordered">
             <thead className="table-dark">

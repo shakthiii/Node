@@ -7,13 +7,10 @@ import { NotFound } from "./NotFound";
 export function ListRoute() {
   const navigate = useNavigate();
   const params = useParams();
-  // console.log(params);
-  // console.log(`http://localhost:5000/api/list/${params.id}`);
 
   const BASE_URL_API_LIST = `http://localhost:5000/api/list/${params.id}`;
   const backendData = DataFromApi(BASE_URL_API_LIST);
   function render(backendData) {
-    // console.log(backendData);
     const { id, name, status, Desc: description, config, value } = backendData;
     return (
       <>
@@ -37,9 +34,6 @@ export function ListRoute() {
       ) : typeof backendData === "undefined" ? (
         <h1 className="text-center">Loading.... </h1>
       ) : (
-        // backendData.data.map((value, i) => {
-        //   <p key={i}>{value}</p>;
-        // })
         <div className="container ">
           <table className="table table-bordered">
             <thead className="table-dark">
